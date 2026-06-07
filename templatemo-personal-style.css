@@ -628,6 +628,10 @@ https://templatemo.com/tm-593-personal-shape
             border-radius: 2px;
         }
 
+        .section-subtitle {
+            margin-bottom: 4rem;
+        }
+
         /* About Section */
         .about {
             background: var(--bg-secondary);
@@ -656,7 +660,7 @@ https://templatemo.com/tm-593-personal-shape
         .about-image {
             width: 100%;
             height: 500px;
-            background: url('images/smiling-girl-computer-desktop.jpg') center/cover;
+            background: url('images/developerAbout.png') center/cover;
             border-radius: 30px;
             position: relative;
             overflow: hidden;
@@ -775,19 +779,19 @@ https://templatemo.com/tm-593-personal-shape
         }
 
         .portfolio-item:nth-child(1) .portfolio-image {
-            background-image: url('images/working-business-women.jpg');
+          /* background-image: url('images/working-business-women.jpg'); */
         }
 
         .portfolio-item:nth-child(2) .portfolio-image {
-            background-image: url('images/computer-desk-stickers.jpg');
+            /* background-image: url('images/computer-desk-stickers.jpg'); */
         }
 
         .portfolio-item:nth-child(3) .portfolio-image {
-            background-image: url('images/curved-display-pinky-girl.jpg');
+            /* background-image: url('images/curved-display-pinky-girl.jpg'); */
         }
 
         .portfolio-item:nth-child(4) .portfolio-image {
-            background-image: url('images/dashboard-interfaces-transparent-displays.jpg');
+            /* background-image: url('images/dashboard-interfaces-transparent-displays.jpg'); */
         }
 
         .portfolio-item:nth-child(5) .portfolio-image {
@@ -836,6 +840,231 @@ https://templatemo.com/tm-593-personal-shape
             gap: 0.75rem;
             flex-wrap: wrap;
         }
+
+
+        /* Projects Section */
+        .projects {
+            background: var(--bg-primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .projects-item {
+            background: var(--bg-card);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(20px);
+            opacity: 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .projects-item.animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .projects-item:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .projects-image {
+            width: 100%;
+            height: 180px;
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .projects-item:nth-child(1) .projects-image {
+            /* background-image: url('images/working-business-women.jpg'); */
+        }
+
+        .projects-item:nth-child(2) .projects-image {
+            background-image: url('images/computer-desk-stickers.jpg');
+        }
+
+        .projects-item:nth-child(3) .projects-image {
+            background-image: url('images/curved-display-pinky-girl.jpg');
+        }
+
+        .projects-item:nth-child(4) .projects-image {
+            background-image: url('images/dashboard-interfaces-transparent-displays.jpg');
+        }
+
+        .projects-item:nth-child(5) .projects-image {
+            background-image: url('images/marketing-strategy-women.jpg');
+        }
+
+        .projects-item:nth-child(6) .projects-image {
+            background-image: url('images/portfolio-website-girl.jpg');
+        }
+
+        .projects-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .projects-item:hover .projects-image::before {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.4) 0%, rgba(139, 92, 246, 0.3) 100%);
+        }
+
+        .projects-content {
+            padding: 2rem;
+        }
+
+        .projects-content h4 {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .projects-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .projects-tech {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+
+
+
+
+        
+        /* Certificates Section */
+        .certificates {
+            background: var(--bg-primary);
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .certificates-item {
+            background: var(--bg-card);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(20px);
+            opacity: 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .certificates-item.animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .certificates-item:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .certificates-image {
+            width: 100%;
+            height: 180px;
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .certificates-item:nth-child(1) .certificates-image {
+            /* background-image: url('images/working-business-women.jpg'); */
+        }
+
+        .certificates-item:nth-child(2) .certificates-image {
+            background-image: url('images/computer-desk-stickers.jpg');
+        }
+
+        .certificates-item:nth-child(3) .certificates-image {
+            background-image: url('images/curved-display-pinky-girl.jpg');
+        }
+
+        .certificates-item:nth-child(4) .certificates-image {
+            background-image: url('images/dashboard-interfaces-transparent-displays.jpg');
+        }
+
+        .certificates-item:nth-child(5) .certificates-image {
+            background-image: url('images/marketing-strategy-women.jpg');
+        }
+
+        .certificates-item:nth-child(6) .certificates-image {
+            background-image: url('images/portfolio-website-girl.jpg');
+        }
+
+        .certificates-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .certificates-item:hover .certificates-image::before {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.4) 0%, rgba(139, 92, 246, 0.3) 100%);
+        }
+
+        .certificates-content {
+            padding: 2rem;
+        }
+
+        .certificates-content h4 {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .certificates-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .certificates-tech {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+
+
+
+
 
         .tech-tag {
             padding: 0.4rem 1rem;
@@ -956,6 +1185,29 @@ https://templatemo.com/tm-593-personal-shape
             border-radius: 35px;
             animation: contactFloatShape6 32s ease-in-out infinite;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         @keyframes contactFloatShape1 {
             0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
@@ -1132,6 +1384,18 @@ https://templatemo.com/tm-593-personal-shape
                 gap: 2rem;
             }
 
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .certificates-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            
+
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 4rem;
@@ -1164,6 +1428,16 @@ https://templatemo.com/tm-593-personal-shape
             }
 
             .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certificates-grid {
                 grid-template-columns: 1fr;
             }
 

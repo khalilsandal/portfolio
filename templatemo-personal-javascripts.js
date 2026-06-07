@@ -75,7 +75,39 @@ https://templatemo.com/tm-593-personal-shape
             });
         }, { threshold: 0.1 });
 
-        // Observe all animation elements
+
+
+        // Staggered animation for projects items
+        const projectsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const items = entry.target.querySelectorAll('.projects-item');
+                    items.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('animate');
+                        }, index * 150);
+                    });
+                }
+            });
+        }, { threshold: 0.1 });
+
+
+        
+        // Staggered animation for certificates items
+        const certificatesObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const items = entry.target.querySelectorAll('.certificates-item');
+                    items.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('animate');
+                        }, index * 150);
+                    });
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe all animation elements (portfolio)
         document.addEventListener('DOMContentLoaded', () => {
             const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
             animatedElements.forEach(el => observer.observe(el));
@@ -85,6 +117,34 @@ https://templatemo.com/tm-593-personal-shape
                 portfolioObserver.observe(portfolioSection);
             }
         });
+
+
+        // Observe all animation elements (projects)
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            animatedElements.forEach(el => observer.observe(el));
+
+            const projectsSection = document.querySelector('.projects-grid');
+            if (projectsSection) {
+                projectsObserver.observe(projectsSection);
+            }
+        });
+
+
+
+        
+        // Observe all animation elements (certificates)
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            animatedElements.forEach(el => observer.observe(el));
+
+            const certificatesSection = document.querySelector('.certificates-grid');
+            if (certificatesSection) {
+                certificatesObserver.observe(certificatesSection);
+            }
+        });
+
+
 
         // Enhanced smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
